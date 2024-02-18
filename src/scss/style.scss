@@ -1,0 +1,432 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+    }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+@import "fonts";
+@import "nullstyle";
+@import "header";
+@import "footer";
+@import "tabs";
+$media-width-1: 1200px;
+$media-width-2: 992px;
+$media-width-3: 767px;
+$media-width-tab: 530px;
+$media-width-4: 480px;
+body{
+@media (max-width:$media-width-2) {
+    &.burger-active{
+        overflow: hidden;
+    }
+}
+
+}
+section {
+    padding: 100px 0 100px 0;
+    @media (max-width: $media-width-3) {
+        padding: 60px 0 60px 0;
+    }
+}
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    @media (max-width: $media-width-1){
+        max-width: 970px;
+    }
+    @media (max-width: $media-width-2){
+        max-width: 750px;
+    }
+    @media (max-width: $media-width-3){
+        max-width: 540px;
+    }
+}
+.second-section {
+    &__subtitle {
+        color: #333333;
+    }
+    &__title {
+        color: #333333;
+    }
+    &-container {
+    }
+}
+.our-salon {
+    background: url("../img/bg/our-salon.jpg") center top no-repeat;
+    background-size: cover !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &__subtitle {
+        color: #FFFFFF;
+    }
+    &__title {
+        color: #FFFFFF;
+    }
+    &__text {
+        margin: 45px auto 60px auto;
+        text-align: center;
+        color: #FFFFFF;
+        max-width: 730px;
+        font-family: Gilroy;    
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0em;
+        @media (max-width: $media-width-3){
+            margin: 30px auto 45px auto;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    &__button {
+        color: #333333;
+        background-color: #FFFFFF;
+        border-color: #333333;
+        transition: 0.3s;
+        &:hover {
+            color: #FFFFFF;
+            background-color: #333333;
+            border-color: #FFFFFF;
+        }
+    }
+    &-container {
+    }
+}
+.blog {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &__subtitle {
+        color: #333333;
+    }
+    &__title {
+        color: #333333;
+    }
+    &__items {
+        margin: 60px 0 60px 0;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:$media-width-1) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width:$media-width-3) {
+            margin: 30px 0 40px 0;
+        }
+    }
+    img {
+        max-width: 100%;
+    }
+    &__item {
+        position: relative;
+        max-width: 350px;
+        @media (max-width:$media-width-1) {
+            width: 30%;
+            margin: 0 auto;
+        }
+        @media (max-width:$media-width-2) {
+            width: 45%;
+            margin: 10px;
+        }
+        @media (max-width:$media-width-tab) {
+            width: 100%;
+            margin: 10px auto;
+        }
+        &::after{
+            content: "";
+            opacity: 0;
+            transition: 0.3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0,0.1);
+        }
+        &:hover{
+            &::after{
+                content: "";
+                transition: 0.3s;
+                opacity: 1;
+            }
+        }
+    }
+    &__item-name {
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        max-width: 206px;
+        font-family: Gilroy;
+        font-size: 21px;
+        line-height: 29px;
+        letter-spacing: 0em;
+        color: #FFFFFF;
+        @media (max-width:$media-width-1) {
+            width: 70%;
+            bottom: 30px;
+        }
+        @media (max-width:$media-width-3) {
+            font-size: 18px;
+            line-height: 21px;
+            bottom: 20px;
+        }
+    }
+    &__button {
+        background: #333333;
+        color: #FFFFFF;
+        border: #333333;
+        transition: 0.3s;
+        &:hover{
+            background: #FFFFFF;
+            color: #333333;
+        }
+    }
+    &-container {
+    }
+}
+.gallery {
+    &__subtitle {
+        a {
+            color: #333333;
+        }
+        transition: 0.3s;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+    &__title {
+        color: #333333;
+    }
+    &__items {
+        margin: 60px 0 0 0;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            &:hover{
+                &::after {
+                    opacity: 0.8;
+                    transform: translate(-50%,-50%) rotate(90deg);
+                }
+            }
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background: url("../img/svg/play.svg");
+                width: 70px;
+                height: 70px;
+                transition: 0.3s;
+                @media (max-width:$media-width-3) {
+                    width: 50px;
+                    height: 50px;
+                    background-size: cover !important;
+                }
+            }
+        }
+        @media (max-width:$media-width-3) {
+            margin: 30px 0 0 0;
+            div {
+                width: 50%;
+            }
+            img{
+                max-height: 250px;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        @media (max-width: $media-width-tab) {
+            & > * {
+                width: 50%;
+            }
+        }
+        @media (max-width: $media-width-4) {
+            & > * {
+                width: 100%;
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:hover{
+            &::before {
+                content: '';
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+        &::before{
+            content: '';
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s;
+            background-color: rgb(0, 0, 0,0.1);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    &-container {
+        padding: 0;
+    }
+}
+.subscribe {
+    background: url("../img/bg/our-salon.jpg");
+    background-size: cover !important;
+    &__container {
+    }
+    &__subtitle {
+        color: #FFFFFF;
+    }
+    &__title {
+        color: #FFFFFF;
+    }
+    &__content {
+        margin: 60px auto 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex: 50% 1 1;
+        @media (max-width: $media-width-3){
+            margin: 30px 0 0 0;
+            flex-direction: column;
+        }
+    }
+    &__left {
+        @media (max-width: $media-width-3){
+            margin: 0 0 15px 0  ;
+        }
+    }
+    &__advantage {
+        font-family: Gilroy;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0em;
+        color: #FFFFFF;
+        height: 17px;
+        display: flex;
+        align-items: center;
+        margin: 7.5px 0;
+        svg {
+            margin-right: 20px;
+            height: 100%;
+        }
+    }
+    &__right {
+        width: 418px;
+        height: 85px;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $media-width-4) {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+    &__input {
+        border: 1px solid #D6D6D6;
+        width: 200px;
+        height: 45px;
+        margin-right: 15px;
+        font-family: Gilroy;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        color: #333333;
+        padding-left: 20px;
+        @media (max-width: $media-width-4) {
+            width: 55%;
+        }
+        &::placeholder{
+            text-transform: uppercase;
+            font-family: Gilroy;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 0.1em;
+            color: rgb(51, 51, 51,50%);
+        }
+    }
+    &__button {
+        font-family: Gilroy;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #333333;
+        letter-spacing: 0.1em;
+        text-align: center;
+        height: 45px;
+        width: 160px;
+        transition: 0.3s;
+        &:hover{
+            opacity: 0.8;
+        }
+        @media (max-width: $media-width-4) {
+            width: 40%;
+        }
+    }
+}   
+.subtitle {
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 21px;
+    line-height: 29px;
+    letter-spacing: 0em;
+    @media (max-width: $media-width-3) {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+}
+.title {
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41px;
+    @media (max-width: $media-width-3) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+.button {
+    font-family: Gilroy;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    height: 51px;
+    width: 261px;
+    border-radius: 0px;
+    padding: 15px 35px 15px 35px;
+    position: relative;
+    border: 1px solid;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OJJO</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+   <div class="wrapper">
+    @@include("_header.html")
+    <section class="second-section">
+        <div class="second-section-container container">
+            <div class="second-section__subtitle subtitle">К мероприятиям</div>
+            <div class="second-section__title title">Настоящая красота здесь!</div>
+            @@include("__tabs.html")
+        </div>
+    </section>
+    <section class="our-salon">
+        <div class="our-salon-container container">
+            <div class="our-salon__subtitle subtitle">Не знаете, что выбрать?</div>
+            <div class="our-salon__title title">Посетите наши салоны в Москве</div>
+            <div class="our-salon__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut duis tortor vitae pellentesque egestas quam pulvinar. Pellentesque porttitor velit sit pellentesque. Suspendisse donec pretium id dignissim. Dignissim ultrices eget orci viverra. Egestas quis et ut ultrices imperdiet lectus nulla tempus. Pharetra lorem sem purus nisi libero viverra ipsum.</div>
+            <a href="#" class="our-salon__button button">наши салоны</a>
+        </div>
+    </section>
+    <section class="blog">
+        <div class="blog-container container">
+            <div class="blog__subtitle subtitle">Полезные статьи</div>
+            <div class="blog__title title">Лучшие советы по подбору дорогих подарков</div>
+            <div class="blog__items">
+                <a href="#" class="blog__item">
+                    <img src="img/blog-1.png" alt="blog-1">
+                    <div class="blog__item-name">Как выбрать часы для своей будущей жены</div>
+                </a>
+                <a href="#" class="blog__item">
+                    <img src="img/blog-2.png" alt="blog-2">
+                    <div class="blog__item-name">Запонки для мужа: 7 ключевых правил покупки аксессуара</div>
+                </a>
+                <a href="#" class="blog__item">
+                    <img src="img/blog-3.png" alt="blog-3">
+                    <div class="blog__item-name">Как выбрать обручальные кольца молодоженам</div>
+                </a>
+            </div>
+            <a href="#" class="blog__button button">читать наш блог</a>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="gallery-container container">
+            <div class="gallery__subtitle subtitle"><a href="#">#ojjo_jewerly</a></div>
+            <div class="gallery__title title">Мы в социальных сетях</div>
+            <div class="gallery__items">
+                <a href="#" class="gallery__item">
+                    <img src="img/gallery-1.png" alt="gallery">
+                </a>
+                <div class="gallery__item">
+                    <img src="img/gallery-2.png" alt="gallery">
+                </div>
+                <div class="gallery__item">
+                    <img src="img/gallery-3.png" alt="gallery">
+                </div>
+                <div class="gallery__item">
+                    <img src="img/gallery-4.png" alt="gallery">
+                </div>
+                <div class="gallery__item">
+                    <img src="img/gallery-5.png" alt="gallery">
+                </div>
+                <a href="#" class="gallery__item">
+                    <img src="img/gallery-6.png" alt="gallery">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe">
+        <div class="subscribe__container container">
+            <div class="subscribe__subtitle subtitle">Полезные советы и персональный предложения</div>
+            <div class="subscribe__title title">Эксклюзивная рассылка</div>
+            <div class="subscribe__content">
+                <div class="subscribe__left">
+                    <div class="subscribe__advantage">
+                        <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 8.5L7.25 10.6651L7.25 6.33494L11 8.5Z" fill="white"/>
+                            <path d="M4.75 2.00481L16 8.5L4.75 14.9952L4.75 2.00481Z" stroke="white"/>
+                        </svg>Личный менеджер</div>
+                    <div class="subscribe__advantage">
+                        <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 8.5L7.25 10.6651L7.25 6.33494L11 8.5Z" fill="white"/>
+                            <path d="M4.75 2.00481L16 8.5L4.75 14.9952L4.75 2.00481Z" stroke="white"/>
+                        </svg>Доставка и оформление</div>
+                    <div class="subscribe__advantage">
+                        <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 8.5L7.25 10.6651L7.25 6.33494L11 8.5Z" fill="white"/>
+                            <path d="M4.75 2.00481L16 8.5L4.75 14.9952L4.75 2.00481Z" stroke="white"/>
+                        </svg>Индивидуальный дизайн</div>
+                </div>
+                <form action="#" class="subscribe__right">
+                    <input type="text" name="" value="" class="subscribe__input" placeholder="Ваш e-mail">
+                    <button class="subscribe__button" type="submit"><span>отправить</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    @@include("_footer.html")
+   </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
